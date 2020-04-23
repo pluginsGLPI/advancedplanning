@@ -1,6 +1,14 @@
 # advancedplanning GLPI plugin
 
-Add your plugin description here.
+This plugin unlock advanced planning features (scheduler view) in GLPI (Home > Assistance > Planning).
+
+Glpi uses [Fullcalendar lib](fullcalendar.io/) to display its planning.
+The [scheduler part](https://fullcalendar.io/license/premium) is triple licenced, the GLPI case is supported by the option 3 : open source.
+As the option 3 is released under GLPV3, we can't use it directly in GLPI as it's incompatible with our licence (GPLv2+).
+
+So this plugin just include the lib and add the option `schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source'` to avoid licence incompatibility.
+
+![Timeline screenshot](./screenshots/timeline.png)
 
 ## Contributing
 
