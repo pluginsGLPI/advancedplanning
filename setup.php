@@ -26,7 +26,7 @@
  --------------------------------------------------------------------------
  */
 
-define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.1');
+define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.2');
 
 /**
  * Init hooks of the plugin.
@@ -35,11 +35,28 @@ define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.1');
  * @return void
  */
 function plugin_init_advancedplanning() {
-   global $PLUGIN_HOOKS;
+   global $PLUGIN_HOOKS, $CFG_GLPI;
 
    $PLUGIN_HOOKS['csrf_compliant']['advancedplanning'] = true;
 
-   if (strpos($_SERVER['REQUEST_URI'], "front/planning.php") !== false) {
+   // manage list of authorized url where to load js/css
+   $calendar_urls = [
+      "front/planning.php",
+      "front/reservation.php",
+   ];
+   foreach ($CFG_GLPI['reservation_types'] as $reservation_type) {
+      $calendar_urls[] = $reservation_type::getFormUrl(false);
+   }
+
+   $found_url = false;
+   foreach ($calendar_urls as $url) {
+      if (strpos($_SERVER['REQUEST_URI'], $url) !==false ) {
+         $found_url = true;
+         break;
+      }
+   }
+
+   if ($found_url) {
       $sc_lib = "lib/fullcalendar-scheduler-4.4.0/packages-premium";
 
       $PLUGIN_HOOKS['add_javascript']['advancedplanning'] = [
