@@ -26,7 +26,7 @@
  --------------------------------------------------------------------------
  */
 
-define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.2');
+define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.2.0');
 
 /**
  * Init hooks of the plugin.
