@@ -29,8 +29,8 @@
  */
 
 define('PLUGIN_ADVANCEDPLANNING_VERSION', '1.0.0');
-define('PLUGIN_ADVANCEDPLANNING_GLPIMIN', '9.5.0');
-define('PLUGIN_ADVANCEDPLANNING_GLPIMAX', '9.6.0');
+define('PLUGIN_ADVANCEDPLANNING_GLPIMIN', '10.0.0');
+define('PLUGIN_ADVANCEDPLANNING_GLPIMAX', '10.0.99');
 
 /**
  * Init hooks of the plugin.
@@ -54,7 +54,7 @@ function plugin_init_advancedplanning() {
 
    $found_url = false;
    foreach ($calendar_urls as $url) {
-      if (strpos($_SERVER['REQUEST_URI'], $url) !==false ) {
+      if (strpos($_SERVER['REQUEST_URI'] ?? '', $url) !== false) {
          $found_url = true;
          break;
       }
