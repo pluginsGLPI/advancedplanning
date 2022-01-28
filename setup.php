@@ -27,6 +27,8 @@
  */
 
 define('PLUGIN_ADVANCEDPLANNING_VERSION', '0.2.0');
+define('PLUGIN_ADVANCEDPLANNING_GLPIMIN', '9.5.0');
+define('PLUGIN_ADVANCEDPLANNING_GLPIMAX', '9.6.0');
 
 /**
  * Init hooks of the plugin.
@@ -92,43 +94,9 @@ function plugin_version_advancedplanning() {
       'homepage'       => '',
       'requirements'   => [
          'glpi' => [
-            'min' => '9.2',
+            'min' => PLUGIN_ADVANCEDPLANNING_GLPIMIN,
+            'max' => PLUGIN_ADVANCEDPLANNING_GLPIMAX,
          ]
       ]
    ];
-}
-
-/**
- * Check pre-requisites before install
- * OPTIONNAL, but recommanded
- *
- * @return boolean
- */
-function plugin_advancedplanning_check_prerequisites() {
-
-   //Version check is not done by core in GLPI < 9.2 but has to be delegated to core in GLPI >= 9.2.
-   $version = preg_replace('/^((\d+\.?)+).*$/', '$1', GLPI_VERSION);
-   if (version_compare($version, '9.2', '<')) {
-      echo "This plugin requires GLPI >= 9.2";
-      return false;
-   }
-   return true;
-}
-
-/**
- * Check configuration process
- *
- * @param boolean $verbose Whether to display message on failure. Defaults to false
- *
- * @return boolean
- */
-function plugin_advancedplanning_check_config($verbose = false) {
-   if (true) { // Your configuration check
-      return true;
-   }
-
-   if ($verbose) {
-      echo __('Installed / not configured', 'advancedplanning');
-   }
-   return false;
 }
