@@ -28,7 +28,7 @@
  * -------------------------------------------------------------------------
  */
 
-define('PLUGIN_ADVANCEDPLANNING_VERSION', '1.0.0');
+define('PLUGIN_ADVANCEDPLANNING_VERSION', '1.1.0');
 define('PLUGIN_ADVANCEDPLANNING_GLPIMIN', '10.0.0');
 define('PLUGIN_ADVANCEDPLANNING_GLPIMAX', '10.0.99');
 
