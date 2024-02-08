@@ -2,7 +2,7 @@
    <name>advancedplanning</name>
    <key>advancedplanning</key>
    <state>stable</state>
-   <logo>https://raw.githubusercontent.com/pluginsGLPI/advancedplanning/master/advancedplanning.png</logo>
+   <logo>https://raw.githubusercontent.com/pluginsGLPI/advancedplanning/main/advancedplanning.png</logo>
    <description>
       <short>
          <en>This plugin unlock advanced planning features (Scheduler view) in GLPI (Home > Assistance > Planning)</en>
@@ -32,7 +32,7 @@ Donc ce plugin inclut juste la bibliothèque et ajouter l'option `schedulerLicen
    <homepage>https://github.com/pluginsGLPI/advancedplanning</homepage>
    <download>https://github.com/pluginsGLPI/advancedplanning/releases</download>
    <issues>https://github.com/pluginsGLPI/advancedplanning/issues</issues>
-   <readme>https://github.com/pluginsGLPI/advancedplanning/blob/master/README.md</readme>
+   <readme>https://github.com/pluginsGLPI/advancedplanning/blob/main/README.md</readme>
    <authors>
       <author>Teclib'</author>
    </authors>
@@ -72,6 +72,6 @@ Donc ce plugin inclut juste la bibliothèque et ajouter l'option `schedulerLicen
       </fr>
    </tags>
    <screenshots>
-      <screenshot>https://raw.githubusercontent.com/pluginsGLPI/advancedplanning/master/screenshots/timeline.png</screenshot>
+      <screenshot>https://raw.githubusercontent.com/pluginsGLPI/advancedplanning/main/screenshots/timeline.png</screenshot>
    </screenshots>
 </root>
