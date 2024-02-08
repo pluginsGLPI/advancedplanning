@@ -1,4 +1,4 @@
-name: "Plugin release"
+name: "Publish release"
 
 on:
   push:
