@@ -33,8 +33,9 @@
  *
  * @return boolean
  */
-function plugin_advancedplanning_install() {
-   return true;
+function plugin_advancedplanning_install()
+{
+    return true;
 }
 
 /**
@@ -42,10 +43,12 @@ function plugin_advancedplanning_install() {
  *
  * @return boolean
  */
-function plugin_advancedplanning_uninstall() {
-   return true;
+function plugin_advancedplanning_uninstall()
+{
+    return true;
 }
 
-function testhook() {
-   return "resourceTimeline";
+function testhook()
+{
+    return "resourceTimeline";
 }
