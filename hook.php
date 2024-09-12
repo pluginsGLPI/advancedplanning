@@ -50,5 +50,5 @@ function plugin_advancedplanning_uninstall()
 
 function testhook()
 {
-    return "resourceTimeline";
+    return 'resourceTimeline';
 }
