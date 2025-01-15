@@ -63,6 +63,10 @@ function plugin_init_advancedplanning()
         }
     }
 
+    $PLUGIN_HOOKS['planning_scheduler_key']['advancedplanning'] = function () {
+        return 'GPL-My-Project-Is-Open-Source';
+    };
+
     if ($found_url) {
         $sc_lib = 'lib/fullcalendar-scheduler-4.4.0/packages-premium';
 
@@ -76,10 +80,6 @@ function plugin_init_advancedplanning()
             "$sc_lib/timeline/main.css",
             "$sc_lib/resource-timeline/main.css",
         ];
-
-        $PLUGIN_HOOKS['planning_scheduler_key']['advancedplanning'] = function () {
-            return 'GPL-My-Project-Is-Open-Source';
-        };
     }
 }
 
