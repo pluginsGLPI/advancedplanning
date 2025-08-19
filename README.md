@@ -1,5 +1,7 @@
 # advancedplanning GLPI plugin
 
+Now included in GLPI core since v11.0 -> https://github.com/glpi-project/glpi/pull/13413
+
 This plugin unlock advanced planning features (scheduler view) in GLPI (Home > Assistance > Planning).
 
 Glpi uses [Fullcalendar lib](fullcalendar.io/) to display its planning.
